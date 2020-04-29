@@ -3,7 +3,7 @@
 
 //-------------------------------------------------------------------- Display Date
     // Grabbed the moment format from the api,
-var date = moment().format('dddd, MMM Do YY');
+var date = moment().format('dddd, MMM Do YYYY');
 console.log(date);
 
     //Added it to the html using the id currentDate
