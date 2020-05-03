@@ -26,7 +26,7 @@ $(document).ready(function () { //loads html before loading the javascript
     // var inOutTextArray = $()
 
     var date = moment().format('dddd, MMM Do YYYY');// Grabbed the day, month, date, and year from the api
-    var time = "2 pm"; //moment().format('h a');// Grabbed the time from the api
+    var time = moment().format('h a');// Grabbed the time from the api
 
 
     //------------------- Display Date ------------------------------------------------//
@@ -159,20 +159,6 @@ $(document).ready(function () { //loads html before loading the javascript
     };
 
     colorTime();
- 
-    // if (time < timeLabel3) {
-    //     textArea3.attr("class", "past");
-    // };
-    // if (time = timeLabel3) {
-    //     textArea3.attr("class", "present")
-    // };
-    // if (time > timeLabel3) {
-    //     textArea3.attr("class", "future")
-    // };
-
-
-    //    $("textarea").attr("class", "past");
-
 
 
     //---------------------------- Saving Time Block ---------------------------------//
