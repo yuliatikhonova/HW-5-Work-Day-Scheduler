@@ -1,13 +1,6 @@
 $(document).ready(function () { //loads html before loading the javascript
 
     //-------------------------------------------------------------------- Variables
-
-    var date = moment().format('dddd, MMM Do YYYY');// Grabbed the day, month, date, and year from the api
-    var time = moment().format('h a');// Grabbed the time from the api
-
-    var timeLabel = $('.time-block');
-    var textArea = $('.description');
-
     var saveButton1 = $('#saveBtn1');
     var saveButton2 = $('#saveBtn2');
     var saveButton3 = $('#saveBtn3');
@@ -17,7 +10,9 @@ $(document).ready(function () { //loads html before loading the javascript
     var saveButton7 = $('#saveBtn7');
     var saveButton8 = $('#saveBtn8');
     var saveButton9 = $('#saveBtn9');
-    
+
+    // var saveButtonArray = $()
+
     var inOutText1 = $('#inputText1');
     var inOutText2 = $('#inputText2');
     var inOutText3 = $('#inputText3');
@@ -28,6 +23,10 @@ $(document).ready(function () { //loads html before loading the javascript
     var inOutText8 = $('#inputText8');
     var inOutText9 = $('#inputText9');
 
+    // var inOutTextArray = $()
+
+    var date = moment().format('dddd, MMM Do YYYY');// Grabbed the day, month, date, and year from the api
+    var time = "2 pm"; //moment().format('h a');// Grabbed the time from the api
 
 
     //------------------- Display Date ------------------------------------------------//
@@ -38,17 +37,142 @@ $(document).ready(function () { //loads html before loading the javascript
     //------------------- Color code past, present, future ---------------------------//
 
     console.log(time)
-    // function timeCheck() {
-    if (time < timeLabel) {
-        textArea.attr("class", "past");
+
+    var textArea1 = $('#inputText1');// var timeLabel1 = $('#9');
+    var textArea2 = $('#inputText2');// var timeLabel2 = $('#10');
+    var textArea3 = $('#inputText3');// var timeLabel3 = $('#11');
+    var textArea4 = $('#inputText4');// var timeLabel4 = $('#12');
+    var textArea5 = $('#inputText5');// var timeLabel5 = $('#1');
+    var textArea6 = $('#inputText6');// var timeLabel6 = $('#2');
+    var textArea7 = $('#inputText7');// var timeLabel7 = $('#3');
+    var textArea8 = $('#inputText8');// var timeLabel8 = $('#4');
+    var textArea9 = $('#inputText9');// var timeLabel9 = $('#5');
+    function colorTime() {
+        if (time === '9 am') {
+            textArea1.attr("class", "present");
+            textArea2.attr("class", "future");
+            textArea3.attr("class", "future");
+            textArea4.attr("class", "future");
+            textArea5.attr("class", "future");
+            textArea6.attr("class", "future");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+         if (time === '10 am') {
+            textArea2.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea3.attr("class", "future");
+            textArea4.attr("class", "future");
+            textArea5.attr("class", "future");
+            textArea6.attr("class", "future");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '11 am') {
+            textArea3.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea4.attr("class", "future");
+            textArea5.attr("class", "future");
+            textArea6.attr("class", "future");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '12 pm') {
+            textArea4.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea5.attr("class", "future");
+            textArea6.attr("class", "future");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '1 pm') {
+            textArea5.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea4.attr("class", "past");
+            textArea6.attr("class", "future");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '2 pm') {
+            textArea6.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea4.attr("class", "past");
+            textArea5.attr("class", "past");
+            textArea7.attr("class", "future");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '3 pm') {
+            textArea7.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea4.attr("class", "past");
+            textArea5.attr("class", "past");
+            textArea6.attr("class", "past");
+            textArea8.attr("class", "future");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '4 pm') {
+            textArea8.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea4.attr("class", "past");
+            textArea5.attr("class", "past");
+            textArea6.attr("class", "past");
+            textArea7.attr("class", "past");
+            textArea9.attr("class", "future");
+        };
+
+        if (time === '5 pm') {
+            textArea9.attr("class", "present");
+            textArea1.attr("class", "past");
+            textArea2.attr("class", "past");
+            textArea3.attr("class", "past");
+            textArea4.attr("class", "past");
+            textArea5.attr("class", "past");
+            textArea6.attr("class", "past");
+            textArea7.attr("class", "past");
+            textArea8.attr("class", "past");
+        };
+
     };
-    // if (time = timeLabel) {
-    //     textArea.attr("class", "present")
+
+    colorTime();
+ 
+    // if (time < timeLabel3) {
+    //     textArea3.attr("class", "past");
     // };
-    if (time > timeLabel) {
-        textArea.attr("class", "future")
-    };
-    // }
+    // if (time = timeLabel3) {
+    //     textArea3.attr("class", "present")
+    // };
+    // if (time > timeLabel3) {
+    //     textArea3.attr("class", "future")
+    // };
+
+
+    //    $("textarea").attr("class", "past");
+
 
 
     //---------------------------- Saving Time Block ---------------------------------//
@@ -128,10 +252,10 @@ $(document).ready(function () { //loads html before loading the javascript
         inOutText8.text(i8);
         var i9 = localStorage.getItem('inputText9');
         inOutText9.text(i9);
-        $('#clear').on("click", function() {
+        $('#clear').on("click", function () {
             localStorage.clear();
         });
-        
+
     };
 
     savedData();
